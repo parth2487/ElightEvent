@@ -67,14 +67,14 @@
 </head>
 <body>
 
-	<h1 class="text-lg font-bold text-gray-700 leading-tight text-center mt-12 mb-5">Form Wizard - Multi Step Form</h1>
+	<h1 class="text-lg font-bold text-gray-700 leading-tight text-center mt-12 mb-5">Elite-Events</h1>
     <form id="signUpForm" class="p-12 shadow-md rounded-2xl bg-white mx-auto border-solid border-2 border-gray-100 mb-8" action="#!">
         <!-- start step indicators -->
         <div class="form-header flex gap-3 mb-4 text-xs text-center">
             <span class="stepIndicator flex-1 pb-8 relative">Account Setup</span>
             <span class="stepIndicator flex-1 pb-8 relative">Social Profiles</span>
             <span class="stepIndicator flex-1 pb-8 relative">Personal Details</span>
-            <span class="stepIndicator flex-1 pb-8 relative">Personal Details</span>
+            <span class="stepIndicator flex-1 pb-8 relative">Role</span>
         </div>
         <!-- end step indicators -->
     
@@ -99,15 +99,15 @@
         <div class="step">
             <p class="text-md text-gray-700 leading-tight text-center mt-8 mb-5">Your presence on the social network</p>
             <div class="mb-6">
-                <input type="text" placeholder="Linked In" name="linkedin"
+                <input type="text" placeholder="First name" name="firstname"
                        class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
             </div>
             <div class="mb-6">
-                <input type="text" placeholder="Twitter" name="twitter"
+                <input type="text" placeholder="Last name" name="lastname"
                        class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
             </div>
             <div class="mb-6">
-                <input type="text" placeholder="Facebook" name="facebook"
+                <input type="text" placeholder="phone no" name="phoneno"
                        class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
             </div>
         </div>
@@ -116,24 +116,24 @@
         <div class="step">
             <p class="text-md text-gray-700 leading-tight text-center mt-8 mb-5">We will never sell it</p>
             <div class="mb-6">
-                <input type="text" placeholder="Full name" name="fullname"
-                       class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
-            </div>
-            <div class="mb-6">
-                <input type="text" placeholder="Mobile" name="mobile"
-                       class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
-            </div>
-            <div class="mb-6">
                 <input type="text" placeholder="Address" name="address"
+                       class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
+            </div>
+            <div class="mb-6">
+                <input type="text" placeholder="city" name="city"
+                       class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
+            </div>
+            <div class="mb-6">
+                <input type="text" placeholder="District" name="district"
                        class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
             </div>
         </div>
     
 
 
-        	<div class="step">
-            <p class="text-md text-gray-700 leading-tight text-center mt-8 mb-5">We will never sell it</p>
-            <div class="mb-6">
+        	<div class="step" style="align-items: center;">
+            <!-- <p class="text-md text-gray-700 leading-tight text-center mt-8 mb-5">We will never sell it</p> -->
+            <!-- <div class="mb-6">
                 <input type="text" placeholder="Full name" name="fullname"
                        class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
             </div>
@@ -144,9 +144,29 @@
             <div class="mb-6">
                 <input type="text" placeholder="Address" name="address"
                        class="w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200" oninput="this.className = 'w-full px-4 py-3 rounded-md text-gray-700 font-medium border-solid border-2 border-gray-200'" />
-            </div>
+            </div> -->
+           
+          <div style="text-align: center;" class="mx-4 ">
+            <h5><b>Choose Your Role</b></h5>
+            <br/>
+            
+         
+            <div style="justify-content: left;">
+            <input type="radio" name="admin"  value="admin"/>
+            <label><strong>Admin</strong></label>
+           
+           
+            <input type="radio" name="customer"  value="Customer"/>
+            <label><strong>Customer</strong></label>
+           
+            
+            <input type="radio"  name="serviceprovider" value="Service Provider"/>
+            <label><strong>Service Provider</strong></label>
+          </div>
+          </div>
         </div>
-
+          <br/>
+          <br/>
 
         <!-- start previous / next buttons -->
         <div class="form-footer flex gap-3">
