@@ -9,10 +9,10 @@ const Chatbot = () => {
 
     script.onload = () => {
       window.botpressWebChat.init({
-        botId: 'c34ab956-4a35-41f1-be7b-292d9ac5a16f',
+        botId: '246df6a2-6c29-4842-8cf1-db0a3992d323',
         hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
         messagingUrl: 'https://messaging.botpress.cloud',
-        clientId: '575fdc73-3b02-4aee-8e83-4d47fd4910d2',
+        clientId: 'c1cd772c-75f8-40a2-8ed5-50e3dceea663',
       })
     }
   }, [])
@@ -24,9 +24,10 @@ export default Chatbot
 
 
 
+https://mediafiles.botpress.cloud/246df6a2-6c29-4842-8cf1-db0a3992d323/webchat/bot.html
 
-
-
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/246df6a2-6c29-4842-8cf1-db0a3992d323/webchat/config.js" defer></script>
 
 import "./style.css"
 import theme from "./theme.json"
@@ -42,3 +43,8 @@ const App = () => {
     </WebchatProvider>
   )
 }
+
+
+https://cdn.botpress.cloud/webchat/v2/shareable.html?botId=246df6a2-6c29-4842-8cf1-db0a3992d323
+
+c1cd772c-75f8-40a2-8ed5-50e3dceea663
