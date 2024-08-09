@@ -21,3 +21,24 @@ const Chatbot = () => {
 }
 
 export default Chatbot
+
+
+
+
+
+
+
+import "./style.css"
+import theme from "./theme.json"
+
+import { Webchat, WebchatProvider, useClient } from '@botpress/webchat'
+
+const App = () => {
+  const client = useClient({ clientId: '453254325-54325-435-345-345534253' })
+
+  return (
+    <WebchatProvider client={client} theme={theme}>
+      <Webchat />
+    </WebchatProvider>
+  )
+}
