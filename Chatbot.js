@@ -1,50 +1,39 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 const Chatbot = () => {
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://cdn.botpress.cloud/webchat/v1/inject.js'
-    script.async = true
-    document.body.appendChild(script)
+    const script = document.createElement('script');
+    script.src = 'https://cdn.botpress.cloud/webchat/v1/inject.js';
+    script.async = true;
+    document.body.appendChild(script);
 
     script.onload = () => {
       window.botpressWebChat.init({
-        botId: '246df6a2-6c29-4842-8cf1-db0a3992d323',
+        botId: 'ecdf3758-af0a-403f-a528-692e3bd1ccc1',
         hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
         messagingUrl: 'https://messaging.botpress.cloud',
-        clientId: 'c1cd772c-75f8-40a2-8ed5-50e3dceea663',
-      })
-    }
-  }, [])
+        clientId: 'ecdf3758-af0a-403f-a528-692e3bd1ccc1',
+        lazySocket: true,
+        useSessionStorage: true,
+        enableConversationDeletion: true,
+        botName: "EliteEvent",
+      avatarUrl: "https://gravatar.com/avatar/ba5cb9cfaacffe5d8d86388203cab868?s=400&d=robohash&r=x",
+      stylesheet: "https://webchat-styler-css.botpress.app/prod/9785b8c4-68d7-4701-8133-98da0f415416/v96749/style.css",
+        themeName: "prism",
+      frontendVersion: "v1",
+      showConversationsButton: false,
+      theme: "prism",
+      themeColor: "#2563eb",
+      });
 
-  return <div id="webchat" />
-}
+      // Reset the chatbot session on each page refresh
+    
+    };
 
-export default Chatbot
+    
+  }, []);
 
+  return <div id="webchat" />;
+};
 
-
-https://mediafiles.botpress.cloud/246df6a2-6c29-4842-8cf1-db0a3992d323/webchat/bot.html
-
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script src="https://mediafiles.botpress.cloud/246df6a2-6c29-4842-8cf1-db0a3992d323/webchat/config.js" defer></script>
-
-import "./style.css"
-import theme from "./theme.json"
-
-import { Webchat, WebchatProvider, useClient } from '@botpress/webchat'
-
-const App = () => {
-  const client = useClient({ clientId: '453254325-54325-435-345-345534253' })
-
-  return (
-    <WebchatProvider client={client} theme={theme}>
-      <Webchat />
-    </WebchatProvider>
-  )
-}
-
-
-https://cdn.botpress.cloud/webchat/v2/shareable.html?botId=246df6a2-6c29-4842-8cf1-db0a3992d323
-
-c1cd772c-75f8-40a2-8ed5-50e3dceea663
+export default Chatbot;
